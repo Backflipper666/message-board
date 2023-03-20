@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.message-title= title
+  p Welcome to #{title}
+  ul.message-form
+    each message in messages
+      li.message-form__list
+        p= message.user
+        p= message.text
+        p= message.added
+  a.message-from__button(href='/new') Add new message
